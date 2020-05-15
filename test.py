@@ -8,9 +8,9 @@ from builders import model_builder
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--checkpoint_path', type=str, default=None, required=True, help='The path to the latest checkpoint weights for your model.')
-parser.add_argument('--crop_height', type=int, default=512, help='Height of cropped input image to network')
-parser.add_argument('--crop_width', type=int, default=512, help='Width of cropped input image to network')
-parser.add_argument('--model', type=str, default=None, required=True, help='The model you are using')
+parser.add_argument('--crop_height', type=int, default=1024, help='Height of cropped input image to network')
+parser.add_argument('--crop_width', type=int, default=1536, help='Width of cropped input image to network')
+parser.add_argument('--model', type=str, default="BiSeNet", required=True, help='The model you are using')
 parser.add_argument('--dataset', type=str, default="CamVid", required=False, help='The dataset you are using')
 args = parser.parse_args()
 
@@ -51,7 +51,7 @@ if not os.path.isdir("%s"%("Test")):
         os.makedirs("%s"%("Test"))
 
 target=open("%s/test_scores.csv"%("Test"),'w')
-target.write("test_name, test_accuracy, precision, recall, f1 score, mean iou, %s\n" % (class_names_string))
+target.write("test_name, test_accuracy, precision, recall, f1 score, mean iou, fps, %s\n" % (class_names_string))
 scores_list = []
 class_scores_list = []
 precision_list = []
@@ -71,8 +71,9 @@ for ind in range(len(test_input_names)):
 
     st = time.time()
     output_image = sess.run(network,feed_dict={net_input:input_image})
-
-    run_times_list.append(time.time()-st)
+    time_diff = time.time()-st
+    fps = 1.0/time_diff
+    run_times_list.append(time_diff)
 
     output_image = np.array(output_image[0,:,:,:])
     output_image = helpers.reverse_one_hot(output_image)
@@ -81,7 +82,7 @@ for ind in range(len(test_input_names)):
     accuracy, class_accuracies, prec, rec, f1, iou = utils.evaluate_segmentation(pred=output_image, label=gt, num_classes=num_classes)
 
     file_name = utils.filepath_to_name(test_input_names[ind])
-    target.write("%s, %f, %f, %f, %f, %f"%(file_name, accuracy, prec, rec, f1, iou))
+    target.write("%s, %f, %f, %f, %f, %f, %f"%(file_name, accuracy, prec, rec, f1, iou, fps))
     for item in class_accuracies:
         target.write(", %f"%(item))
     target.write("\n")
