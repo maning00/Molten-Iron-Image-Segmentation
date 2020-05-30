@@ -7,7 +7,7 @@ from utils import utils, helpers
 from builders import model_builder
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--checkpoint_path', type=str, default=None, required=True, help='The path to the latest checkpoint weights for your model.')
+parser.add_argument('--checkpoint_path', type=str, default="checkpoints/latest_model_BiSeNet_CamVid.ckpt", required=True, help='The path to the latest checkpoint weights for your model.')
 parser.add_argument('--crop_height', type=int, default=1024, help='Height of cropped input image to network')
 parser.add_argument('--crop_width', type=int, default=1536, help='Width of cropped input image to network')
 parser.add_argument('--model', type=str, default="BiSeNet", required=True, help='The model you are using')
