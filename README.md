@@ -11,5 +11,5 @@ This repository is an implementation for molten iron slag skimming image segment
 - Image Segmentation
 
 ##Directories
-**Image_Preprocessing**: This folder contains some utilities, implementations of traditional noise reduction and image segmentation. <br>
-**Image_Segmentation**: This folder contains deep Learning-based image segmentation.
+ **Image_Preprocessing**: This folder contains some utilities, implementations of traditional noise reduction and image segmentation. <br>
+ **Image_Segmentation**: This folder contains deep Learning-based image segmentation.
