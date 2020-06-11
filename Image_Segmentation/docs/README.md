@@ -28,7 +28,7 @@ This repository is an implementation for molten iron slag skimming image segment
 
 - **utils.py:** Utilities for printing, debugging, testing, and evaluation
 
-- **models:** Folder containing all model files. Use this to build your models, or use a pre-built one
+- **models:** Folder containing all model files. Use this to build your models, or use a pre-built one. Default is BiSeNet.
 
 - **datasets:** The dataset for Semantic Segmentation.
 
