@@ -1,3 +1,5 @@
+## Description
+In this study, the dark channel prior defogging was used to obtain good results. We've tried a few other methods too, here are the implementation of some other methods
 ## Files
 - **canny.py:** Canny edge detection for image segmentation.
 
