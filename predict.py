@@ -12,7 +12,7 @@ parser.add_argument('--checkpoint_path', type=str, default=None, required=True, 
 parser.add_argument('--crop_height', type=int, default=1024, help='Height of cropped input image to network')
 parser.add_argument('--crop_width', type=int, default=1536, help='Width of cropped input image to network')
 parser.add_argument('--model', type=str, default=None, required=True, help='The model you are using')
-parser.add_argument('--dataset', type=str, default="CamVid", required=False, help='The dataset you are using')
+parser.add_argument('--dataset', type=str, default="datasets", required=False, help='The dataset you are using')
 args = parser.parse_args()
 
 class_names_list, label_values = helpers.get_label_info(os.path.join(args.dataset, "class_dict.csv"))

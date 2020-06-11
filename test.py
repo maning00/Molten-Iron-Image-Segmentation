@@ -11,7 +11,7 @@ parser.add_argument('--checkpoint_path', type=str, default="checkpoints/latest_m
 parser.add_argument('--crop_height', type=int, default=1024, help='Height of cropped input image to network')
 parser.add_argument('--crop_width', type=int, default=1536, help='Width of cropped input image to network')
 parser.add_argument('--model', type=str, default="BiSeNet", required=True, help='The model you are using')
-parser.add_argument('--dataset', type=str, default="CamVid", required=False, help='The dataset you are using')
+parser.add_argument('--dataset', type=str, default="datasets", required=False, help='The dataset you are using')
 args = parser.parse_args()
 
 # Get the names of the classes so we can record the evaluation results

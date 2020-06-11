@@ -125,8 +125,8 @@ def colour_code_segmentation(image, label_values):
 
     return x
 
-# class_dict = get_class_dict("CamVid/class_dict.csv")
-# gt = cv2.imread("CamVid/test_labels/0001TP_007170_L.png",-1)
+# class_dict = get_class_dict("datasets/class_dict.csv")
+# gt = cv2.imread("datasets/test_labels/0001TP_007170_L.png",-1)
 # gt = reverse_one_hot(one_hot_it(gt, class_dict))
 # gt = colour_code_segmentation(gt, class_dict)
 
