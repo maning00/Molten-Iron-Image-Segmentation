@@ -11,20 +11,20 @@ def main1():
     for i in range(0, width):  # 遍历所有长度的点
         for j in range(0, height):
             data = (img.getpixel((i, j)))
-            #print(data)
-            if data[0] == 0:  #背景
+            # print(data)
+            if data[0] == 0:  # 背景
                 img.putpixel((i, j), (255, 255, 255, 255))
-            elif data[0] == 1:  #铁水
+            elif data[0] == 1:  # 铁水
                 img.putpixel((i, j), (0, 140, 210, 255))
-            elif data[0] == 2:   #铁渣
+            elif data[0] == 2:  # 铁渣
                 img.putpixel((i, j), (228, 0, 144, 255))
-            elif data[0] == 3:   #扒渣铲
+            elif data[0] == 3:  # 扒渣铲
                 img.putpixel((i, j), (0, 175, 77, 255))
-            else:   #探针
+            else:  # 探针
                 img.putpixel((i, j), (255, 225, 0, 255))
-    #img = img.convert("RGB")
+    # img = img.convert("RGB")
     img.save("testee1.png")  # 保存修改像素点后的图片
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     main1()

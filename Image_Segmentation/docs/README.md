@@ -1,19 +1,9 @@
-# Semantic Segmentation For Molten Iron Slag Skimming
-- Based On [GeorgeSeif/Semantic-Segmentation-Suite](https://github.com/GeorgeSeif/Semantic-Segmentation-Suite)
-![alt-text-9](https://dsc.cloud/8532ed/img_772.png) ![alt-text-10](https://dsc.cloud/8532ed/img_772_L.png)
-
-
-
-## Description
-This repository is an implementation for molten iron slag skimming image segmentation,
-
-
+Based On [GeorgeSeif/Semantic-Segmentation-Suite](https://github.com/GeorgeSeif/Semantic-Segmentation-Suite) <br>
+##Description
 - Training and testing model
 - Data augmentation
 - Evaluation including precision, recall, f1 score, average accuracy, per-class accuracy, fps and mean IoU
 - Plotting of loss function and accuracy over epochs
-
-
 
 ## Files and Directories
 
