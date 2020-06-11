@@ -1,6 +1,10 @@
 # Semantic Segmentation For Molten Iron Slag Skimming
 In the metallurgical industry, molten iron slag skimming is still dependent on manual operation. This study uses the production environment data and images provided by [Baosteel](http://www.baosteel.com/group_en/) for image segmentation to provide the basis for subsequent control to achieve automatic skimming of slag.
-![alt-text-9](https://dsc.cloud/8532ed/img_772.png) ![alt-text-10](https://dsc.cloud/8532ed/img_772_L.png)
+
+
+Original            |  Pred
+:-------------------------:|:-------------------------:
+![alt text-1](https://dsc.cloud/8532ed/img_772.png)  |  ![alt text-2](https://dsc.cloud/8532ed/img_772_L.png)
 
 
 
